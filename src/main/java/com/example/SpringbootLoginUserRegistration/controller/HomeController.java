@@ -2,40 +2,33 @@ package com.example.SpringbootLoginUserRegistration.controller;
 
 import com.example.SpringbootLoginUserRegistration.model.User;
 import com.example.SpringbootLoginUserRegistration.service.MyUserService;
-import net.bytebuddy.utility.RandomString;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
-import org.springframework.http.ResponseEntity;
-import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.Map;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping(path="group")
-public class HomeController {
-
+@Controller
+public class UserRegistration {
 
     @Autowired
     private MyUserService myUserService;
 
-
-    @RequestMapping("/")
-    public String home(){
-        return "home";
+    @ModelAttribute("user")
+    public User user() {
+        return new User();
     }
 
-    @RequestMapping("/login")
-    public String login(){
-        return "login";
+    @RequestMapping("/adduser")
+    public String adduser(){
+        return "adduser";
     }
 
-    @RequestMapping("/logout-success")
-    public String logout(){
-        return "login";
+    @PostMapping("/adduser")
+    public String newuerdata(@ModelAttribute("user") User user){
+        myUserService.save(user);
+        return "redirect:/";
     }
 
 }
