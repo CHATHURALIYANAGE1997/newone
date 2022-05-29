@@ -10,11 +10,11 @@ import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
+import org.springframework.web.bind.annotation.RestController;
 
-
+@RestController
 @RequestMapping(path="group-project-3rd.herokuapp.com")
 public class HomeController {
 
