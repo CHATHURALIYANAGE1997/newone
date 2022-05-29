@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
-@CrossOrigin
+
 @Controller
 public class HomeController {
 
