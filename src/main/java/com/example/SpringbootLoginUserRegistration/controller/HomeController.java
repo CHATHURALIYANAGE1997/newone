@@ -15,7 +15,7 @@ import java.util.Map;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path="group-project-3rd.herokuapp.com")
+@RequestMapping(path="group")
 public class HomeController {
 
 
