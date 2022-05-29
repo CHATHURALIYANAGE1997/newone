@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path="group-project-3rd.herokuapp.com")
+@RequestMapping(path="group")
 public class UserRegistration {
 
     @Autowired
