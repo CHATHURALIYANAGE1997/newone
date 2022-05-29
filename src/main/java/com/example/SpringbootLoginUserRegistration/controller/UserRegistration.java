@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-@Controller
+@RequestMapping(path="group-project-3rd.herokuapp.com")
 public class UserRegistration {
 
     @Autowired
